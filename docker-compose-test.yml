@@ -1,10 +1,10 @@
 services:
-  db:
+  postgres_db:
     image: postgres
     container_name: postgres_db
     restart: always
     ports:
-      -5432:5432
+      - 5432:5432
     env_file:
       - .env.test
   node_app:
